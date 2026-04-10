@@ -1,238 +1,207 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>就活サポートサービス</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>就活サポートサービス</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.6;
-    }
+body {
+font-family: Arial, sans-serif;
+background: #f8fafc;
+color: #0f172a;
+line-height: 1.6;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 24px;
-    }
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 24px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px 60px;
-    }
+.hero {
+text-align: center;
+padding: 80px 20px 60px;
+}
 
-    .badge {
-      display: inline-block;
-      background: #ffffff;
-      padding: 8px 16px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      font-size: 14px;
-    }
+.badge {
+display: inline-block;
+background: #ffffff;
+padding: 8px 16px;
+border-radius: 999px;
+margin-bottom: 20px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+font-size: 14px;
+}
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+h1 { font-size: 42px; margin-bottom: 20px; }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 28px;
-      color: #475569;
-      font-size: 17px;
-    }
+.hero p {
+max-width: 700px;
+margin: 0 auto 28px;
+color: #475569;
+font-size: 17px;
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+}
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: bold;
-    }
+.btn {
+display: inline-block;
+text-decoration: none;
+padding: 14px 22px;
+border-radius: 14px;
+font-weight: bold;
+}
 
-    .btn-primary {
-      background: #0f172a;
-      color: white;
-    }
+.btn-primary { background: #0f172a; color: white; }
 
-    .btn-secondary {
-      background: white;
-      color: #0f172a;
-      border: 1px solid #cbd5e1;
-    }
+.section-title {
+text-align: center;
+margin-bottom: 12px;
+font-size: 32px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 12px;
-      font-size: 32px;
-    }
+.section-subtitle {
+text-align: center;
+color: #64748b;
+margin-bottom: 36px;
+}
 
-    .section-subtitle {
-      text-align: center;
-      color: #64748b;
-      margin-bottom: 36px;
-    }
+.services {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 24px;
+margin-bottom: 70px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-bottom: 70px;
-    }
+.card {
+background: white;
+border-radius: 22px;
+padding: 28px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+border: 1px solid #e2e8f0;
+}
 
-    .card {
-      background: white;
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-      border: 1px solid #e2e8f0;
-    }
+.price-box {
+background: #f8fafc;
+padding: 18px;
+border-radius: 16px;
+}
 
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
+.price {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+}
 
-    .card p {
-      color: #475569;
-      margin-bottom: 20px;
-    }
+.divider {
+border-top: 1px solid #e2e8f0;
+margin-top: 12px;
+padding-top: 12px;
+}
 
-    .price-box {
-      background: #f8fafc;
-      padding: 18px;
-      border-radius: 16px;
-    }
+.contact {
+background: white;
+border-top: 1px solid #e2e8f0;
+padding: 60px 20px;
+text-align: center;
+}
 
-    .label {
-      font-size: 14px;
-      color: #64748b;
-      margin-bottom: 6px;
-    }
-
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .divider {
-      border-top: 1px solid #e2e8f0;
-      margin-top: 12px;
-      padding-top: 12px;
-    }
-
-    .contact {
-      background: white;
-      border-top: 1px solid #e2e8f0;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .contact p {
-      max-width: 720px;
-      margin: 14px auto 24px;
-      color: #475569;
-    }
-
-    .notice {
-      background: #f8fafc;
-      padding: 18px;
-      border-radius: 16px;
-      border: 1px solid #e2e8f0;
-      max-width: 760px;
-      margin: 0 auto 20px;
-      color: #334155;
-    }
-
-    @media (max-width: 640px) {
-      h1 {
-        font-size: 32px;
-      }
-
-      .section-title {
-        font-size: 26px;
-      }
-    }
-  </style>
+.notice {
+background: #f8fafc;
+padding: 18px;
+border-radius: 16px;
+border: 1px solid #e2e8f0;
+max-width: 760px;
+margin: 0 auto 20px;
+color: #334155;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <section class="hero">
-      <div class="badge">就活サポートサービス</div>
-      <h1>あなたの就活を、<br />実践的にサポートします。</h1>
-      <p>
-        サイトに来た人がすぐにサービス内容を確認できる、シンプルで見やすいページです。
-        ES添削と模擬面接の2つのサービスを掲載しています。
-      </p>
-      <div class="buttons">
-        <a href="#services" class="btn btn-primary">サービスを見る</a>
-        <a href="https://x.com/uztm_?s=21" target="_blank" class="btn btn-secondary">Xから予約する</a>
-      </div>
-    </section>
 
-    <section id="services">
-      <h2 class="section-title">サービス内容</h2>
-      <p class="section-subtitle">必要なサポートを、シンプルな料金で提供します。</p>
+<div class="container">
+<section class="hero">
+<div class="badge">就活サポートサービス</div>
+<h1>あなたの就活を、<br />実践的にサポートします。</h1>
 
-      <div class="services">
-        <div class="card">
-          <h3>ES添削</h3>
-          <p>ガクチカの書き方が分からない人必見！ガクチカの書き方、人事が求めている要素を考慮したESをあなたのガクチカに合わせて徹底支援！</p>
-          <div class="price-box">
-            <div class="label">料金</div>
-            <div class="price">初回30分 1,500円</div>
-            <div class="divider">
-              <div class="price">2回目以降 2,500円</div>
-            </div>
-          </div>
-        </div>
+<p>
+ES添削・模擬面接を通じて、内定に直結する改善を行います。
+</p>
 
-        <div class="card">
-          <h3>模擬面接</h3>
-          <p>模擬面接200回以上、選考面接100回の私が30分の面接を自分のものにする面接設計の作成支援！</p>
-          <div class="price-box">
-            <div class="label">料金</div>
-            <div class="price">30分 1,500円</div>
-            <div class="divider">
-              <div class="price">2回目以降 2,500円</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<div class="buttons">
+<a href="#services" class="btn btn-primary">サービスを見る</a>
+</div>
+</section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="section-title">予約・お問い合わせ</h2>
-      <p>
-        ご予約はXのプロフィールからDMでご連絡ください。
-        支援内容と、希望日程を2週間分ほどまとめて送っていただけると、日程調整がスムーズです。
-      </p>
-      <div class="notice">
-        送ってもらう内容：<br />
-        ・希望する支援内容（ES添削 / 模擬面接）<br />
-        ・希望日程を2週間分ほど
-      </div>
-      <a href="https://x.com/uztm_?s=21" target="_blank" class="btn btn-primary">Xプロフィールへ移動する</a>
-    </div>
-  </section>
+<section id="services">
+<h2 class="section-title">サービス内容</h2>
+<p class="section-subtitle">シンプルな料金で、実践的にサポートします。</p>
+
+<div class="services">
+
+<div class="card">
+<h3>ES添削</h3>
+<p>人事視点で、通過するESに改善します。</p>
+
+<div class="price-box">
+<div class="price">初回30分 1,500円</div>
+<div class="divider">
+<div class="price">2回目以降 2,500円</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>模擬面接</h3>
+<p>面接200回以上の経験から、通過率を上げる設計を行います。</p>
+
+<div class="price-box">
+<div class="price">初回30分 1,500円</div>
+<div class="divider">
+<div class="price">2回目以降 2,500円</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+</div>
+
+<section class="contact" id="contact">
+<div class="container">
+
+<h2 class="section-title">予約方法</h2>
+
+<p>
+以下のボタンからDMを送ってください。<br>
+確認後、支払い方法と日程をご案内します。
+</p>
+
+<div class="notice">
+以下をコピーしてお送りください：<br><br>
+
+① 希望サービス（ES添削 / 模擬面接）<br>
+② 希望日時（第3希望まで）<br>
+③ 学年・志望業界
+</div>
+
+<a href="https://x.com/messages/compose?recipient_id=@uztm_&text=相談希望です" 
+target="_blank" class="btn btn-primary">
+
+DMで申し込む
+
+</a>
+
+</div>
+</section>
+
 </body>
 </html>
